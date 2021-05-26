@@ -3,9 +3,9 @@ import React from "react";
 // ContactItem
 import ContactItem from "./ContactItem/ContactItem";
 
-const ContactList = ({ ContactList, onDelete,onStatus}) => {
+const ContactList = ({ ContactList, onDelete, onEdit,onStatus}) => {
     const item = ContactList.map(contact => {
-        return <ContactItem key={contact.Id} {...contact} onDelete={() => onDelete(contact.Id)} onStatus={()=>onStatus(contact.Id)}/>
+        return <ContactItem key={contact.Id} {...contact} onEdit={() => onEdit(contact.Id)} onDelete={() => onDelete(contact.Id)} onStatus={()=>onStatus(contact.Id)} />
     })
     return (
         <div className="container bootstrap snippets bootdeys bootdey">

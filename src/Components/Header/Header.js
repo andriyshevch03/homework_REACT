@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const Header = () => {
+import Search from "./Search/Search";
+const Header = ({searchName,showStatus}) => {
     return (
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,10 +24,7 @@ const Header = () => {
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="text" placeholder="Search" />
-                        <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                   <Search searchName ={searchName} showStatus = {showStatus}/>
                 </div>
             </nav>
         </div>
